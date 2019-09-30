@@ -1,0 +1,6 @@
+**/node_modules
+**/bower_components
+**/vendor
+**/*.min.js
+test/lib
+src/data/exampleVideoData.js
