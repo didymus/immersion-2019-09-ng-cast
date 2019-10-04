@@ -4,9 +4,24 @@ angular.module('video-player')
     videos: '<',
     onClick: '<',
     },
-    controller: function(){
-
+    controller: function($scope){
+    console.log($scope);
     },
-    templateUrl: 'src/templates/videoList.html'
   });
+  // .directive('videoList', function(){
+  //   return {
+  //     scope: {
+  //       videos: '<',
+  //       onClick: '<',
+  //   },
+
+  //   controllerAs: 'ctrl',
+  //   bindToController: true,
+  //   controller: function($scope){
+  //     console.log($scope);
+  //   },
+
+  //   templateUrl: 'src/templates/videoList.html'
+  // };
+  // });
   
