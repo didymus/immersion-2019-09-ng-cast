@@ -7,6 +7,7 @@ angular.module('video-player')
     controller: function($scope){
     console.log($scope);
     },
+    templateUrl: 'src/templates/videoList.html'
   });
   // .directive('videoList', function(){
   //   return {
