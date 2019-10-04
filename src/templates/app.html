@@ -6,10 +6,11 @@
   </nav>
   <div class="row">
     <div class="col-md-7">
-      <video-player video="$ctrl.currentVideo"><h5><em>videoPlayer</em> component goes here</h5></video-player>
+      <video-player ng-if="$ctrl.currentVideo" video="$ctrl.currentVideo"></video-player>
+      <video-player ng-if="!($ctrl.currentVideo)" video="$ctrl.currentVideo"></video-player>
     </div>
     <div class="col-md-5">
-      <video-list videos="$ctrl.videos" on-click="$ctrl.selectVideo"><h5><em>videoList</em> component goes here</h5></video-list>
+      <video-list videos="$ctrl.videos" on-click="$ctrl.selectVideo"></video-list>
     </div>
   <div>
 </div>

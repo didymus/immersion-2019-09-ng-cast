@@ -1,5 +1,4 @@
 angular.module('video-player')
-//
 .service('youTube', function($http, $window) {
   this.search = function(query, callback){
     $http.get('https://www.googleapis.com/youtube/v3/search', {
