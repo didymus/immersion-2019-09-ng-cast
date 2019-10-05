@@ -1,18 +1,26 @@
 angular.module('video-player')
-  .service('youTube', function ($http) {
+  .service('youTube', function ($http, $window) {
     this.search = function(query, callback){
-      return $http({
-        method: 'GET', 
-        url: 'https://www.googleapis.com/youtube/v3/search', 
+      $http.get('https://www.googleapis.com/youtube/v3/search', { 
         params: {
+          method: 'GET',
           part: 'snippet',
-          key: window.YOUTUBE_API_KEY,
+          key: $window.YOUTUBE_API_KEY,
           q: query,
           maxResults: 5,
           type: 'video',
           videoEmbeddable: 'true'
+        },
+      }).then(function({data}){
+        if(callback){
+          callback(data.items);
+          console.log('Success!');
         }
-      }).done(data => callback(data.items))
-        .fail(err => console.log('GET failed', err));
+      })
+        .catch(function({data}){
+          data.errors.errors.forEach(function(err){
+            console.error('Failed!');
+          });
+        });
     }; 
   }); 
