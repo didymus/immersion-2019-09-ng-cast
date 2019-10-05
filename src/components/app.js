@@ -2,14 +2,14 @@ angular.module('video-player')
 .component('app', {
   controller: function(youTube){ // $scope
     this.selectVideo = (index) => {
-      this.currentVideo = window.exampleVideoData; //this.videos[index];
+      this.currentVideo = this.videos[index];
     };
     this.updateVideos = (list) => {
       this.videos = list;
       this.currentVideo = this.videos[0];
     };
     this.onSearched = (input) => {
-      console.log(input);
+      //console.log(input);
       youTube.search(input, this.updateVideos);
     };
     youTube.search('simulation theory', this.updateVideos);

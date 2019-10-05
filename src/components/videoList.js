@@ -9,9 +9,9 @@ angular.module('video-player')
       onClick: '<',
     }, 
     controller: function($scope) {
-    this.data = window.exampleVideoData;
-    $scope.videos = this.data;
-    console.log(this.data)
+    // this.data = window.exampleVideoData;
+    // $scope.videos = this.data;
+    // console.log(this.data)
     }, 
     //linking the HTML
    

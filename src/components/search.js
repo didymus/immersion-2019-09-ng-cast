@@ -13,7 +13,11 @@ angular.module('video-player')
       this.onClick = (input) => {
         this.result(input);
         this.input = '';
-      }
+      };
+      this.onSearched = (input) => {
+        //console.log(input);
+        youTube.search(input, this.updateVideos);
+      };
     },
     templateUrl: 'src/templates/search.html' // TODO
   });
