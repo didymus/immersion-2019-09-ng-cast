@@ -1,4 +1,9 @@
 angular.module('video-player')
   .component('videoListEntry', {
-    // TODO
+    //linking the HTML
+    templateUrl: 'src/templates/videoListEntry.html',
+    controller: function ($scope) {
+
+    }
+
   });
