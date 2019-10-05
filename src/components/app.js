@@ -10,9 +10,12 @@ angular.module('video-player')
     };
     this.onSearched = (input) => {
       //console.log(input);
-      youTube.search(input, this.updateVideos);
+      youTube.search(input, (data) => {
+        this.videos = data;
+        this.currentVideo = data[0];
+      })
     };
-    youTube.search('simulation theory', this.updateVideos);
+    youTube.search('nick bostrom', this.updateVideos);
     this.currentVideo = this.videos ? this.videos[0] : {};
   },
   templateUrl: 'src/templates/app.html'
