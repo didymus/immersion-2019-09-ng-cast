@@ -1,5 +1,5 @@
 <ul class="video-list">
-  <video-list-entry ng-repeat="video in videos">
+  <video-list-entry ng-repeat="video in $ctrl.videos" ng-click="$ctrl.onClick($index)">
     <h5><em>videoListEntry</em> component goes here</h5>
   </video-list-entry>
 </ul>

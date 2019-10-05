@@ -3,5 +3,5 @@ angular.module('video-player')
     bindings: {
       video: '<'
     },
-    templateUrl: 'src/templates/videoPlayer.html' // TODO
+    templateUrl: 'src/templates/videoPlayer.html'
   });
