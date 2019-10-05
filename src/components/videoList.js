@@ -5,24 +5,8 @@ angular.module('video-player')
     onClick: '<',
     },
     controller: function($scope){
-    console.log($scope);
+    console.log($scope); // probably will have to change this
     },
     templateUrl: 'src/templates/videoList.html'
   });
-  // .directive('videoList', function(){
-  //   return {
-  //     scope: {
-  //       videos: '<',
-  //       onClick: '<',
-  //   },
-
-  //   controllerAs: 'ctrl',
-  //   bindToController: true,
-  //   controller: function($scope){
-  //     console.log($scope);
-  //   },
-
-  //   templateUrl: 'src/templates/videoList.html'
-  // };
-  // });
   

@@ -12,7 +12,7 @@ angular.module('video-player', [])
       youTube.search(input, this.updateVideos);
     };
     youTube.search('AngularJS tutorial', this.updateVideos);
-    //this.currentVideo = this.video ? this.videos[0] : {};
+    this.currentVideo = this.videos ? this.videos[0] : {};
   },
   templateUrl: 'src/templates/app.html',
   });
