@@ -1,5 +1,6 @@
 angular.module('video-player')
   .component('videoListEntry', {
+<<<<<<< HEAD
     bindings: {
       video: '<'
     },
@@ -9,4 +10,12 @@ angular.module('video-player')
     },
 
     templateUrl: 'src/templates/videoListEntry.html'
+=======
+    //linking the HTML
+    templateUrl: 'src/templates/videoListEntry.html',
+    controller: function ($scope) {
+
+    }
+
+>>>>>>> c9e92eb3d4a0668925a01a726e07dcab8f79b6b3
   });

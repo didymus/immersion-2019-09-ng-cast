@@ -1,12 +1,20 @@
 angular.module('video-player')
   .component('videoList', {
+
+    // use the same name as you declared in the HTML(‘data’) and add it into a bindings object
     bindings: {
-    videos: '<',
-    onClick: '<',
-    },
-    controller: function($scope){
-    console.log($scope); // probably will have to change this
-    },
-    templateUrl: 'src/templates/videoList.html'
+      // ‘<’: This is a one directional binding.
+      data: '<'
+    }, 
+    controller: function($scope) {
+    this.data = window.exampleVideoData;
+    $scope.videos = this.data;
+    console.log(this.data)
+    }, 
+    //linking the HTML
+   
+    templateUrl: 'src/templates/videoList.html', 
+  
+
   });
   

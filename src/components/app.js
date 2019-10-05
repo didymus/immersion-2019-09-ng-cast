@@ -1,18 +1,10 @@
-angular.module('video-player', [])  
+angular.module('video-player', [])
+.controller('appCtrl', function ($scope){
+  // declare the data that you want to pass down to the child components.
+})
 .component('app', {
-  controller: function(youTube){
-    this.selectVideo = (index) => {
-      this.currentVideo = this.videos[index];
-    };
-    this.updateVideos = (list) => {
-      this.videos = list;
-      this.currentVideo = this.videos[0];
-    };
-    this.onSearched = (input) => {
-      youTube.search(input, this.updateVideos);
-    };
-    youTube.search('AngularJS tutorial', this.updateVideos);
-    this.currentVideo = this.videos ? this.videos[0] : {};
-  },
-  templateUrl: 'src/templates/app.html',
-  });
+  controller: 'appCtrl', 
+  templateUrl: 'src/templates/app.html', 
+
+}) 
+
