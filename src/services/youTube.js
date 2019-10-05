@@ -1,5 +1,5 @@
 angular.module('video-player')
-  .service('youTube', function () {
+  .service('youTube', function ($http) {
     this.search = function(query, callback){
       return $http({
         method: 'GET', 
