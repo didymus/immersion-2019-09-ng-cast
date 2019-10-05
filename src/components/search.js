@@ -1,7 +1,8 @@
 angular.module('video-player')
   .component('search', {
     bindings: {
-      onSearched: '<'
+      onSearched: '<',
+      service: '<'
     },
     controller: function(youTube){
     this.search = (query) => {
@@ -10,6 +11,5 @@ angular.module('video-player')
     })
     }
     },
-
     templateUrl: 'src/templates/search.html' // TODO
   });

@@ -1,6 +1,6 @@
 angular.module('video-player')
 .component('app', {
-  controller: function(youTube){ // $scope
+  controller: function(youTube){
     this.selectVideo = (index) => {
       this.currentVideo = this.videos[index];
     };
